@@ -1,28 +1,30 @@
 name: Test Coveralls
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+
+on: ["push", "pull_request"]
 
 jobs:
   build_and_test:
     name: Build and test
     runs-on: ubuntu-latest
     steps:
+
     - name: Checkout code
       uses: actions/checkout@v2
+
     - name: Install Ruby
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.6.3
         bundler-cache: true
+
     - name: Run tests
       run: bundle exec rspec
+
     - name: Coveralls
       uses: coverallsapp/github-action@master
+      env:
+        COVERALLS_NODE_DEBUG=1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         coveralls-endpoint: https://ec2-3-142-48-216.us-east-2.compute.amazonaws.com/
         path-to-lcov: ./coverage/lcov/coveralls-demo-ruby-enterprise.lcov
-        env: COVERALLS_NODE_DEBUG=1
