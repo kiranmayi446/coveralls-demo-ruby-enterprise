@@ -2,12 +2,13 @@ name: Test Coveralls
 
 on: ["push", "pull_request"]
 
+env:
+  COVERALLS_NODE_DEBUG: 1
+
 jobs:
   build_and_test:
     name: Build and test
     runs-on: ubuntu-latest
-    env:
-      COVERALLS_NODE_DEBUG=1
     steps:
 
     - name: Checkout code
