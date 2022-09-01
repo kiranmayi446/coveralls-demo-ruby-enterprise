@@ -6,6 +6,8 @@ jobs:
   build_and_test:
     name: Build and test
     runs-on: ubuntu-latest
+    env:
+      COVERALLS_NODE_DEBUG=1
     steps:
 
     - name: Checkout code
@@ -22,8 +24,6 @@ jobs:
 
     - name: Coveralls
       uses: coverallsapp/github-action@master
-      env:
-        COVERALLS_NODE_DEBUG=1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         coveralls-endpoint: https://ec2-3-142-48-216.us-east-2.compute.amazonaws.com/
