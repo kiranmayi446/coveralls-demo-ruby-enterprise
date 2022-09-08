@@ -27,5 +27,5 @@ jobs:
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        coveralls-endpoint: https://ec2-18-222-206-194.us-east-2.compute.amazonaws.com
+        coveralls-endpoint: https://18.222.206.194
         path-to-lcov: ./coverage/lcov/coveralls-demo-ruby-enterprise.lcov
