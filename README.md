@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.z.nf/repos/github/afinetooth/coveralls-demo-ruby/badge.svg?branch=master)](https://coveralls.z.nf/github/afinetooth/coveralls-demo-ruby?branch=master)
+[![Coverage Status](https://enterprise-demo.coveralls.io/repos/github/afinetooth/coveralls-demo-ruby-enterprise/badge.svg?branch=main)](https://enterprise-demo.coveralls.io/github/afinetooth/coveralls-demo-ruby-enterprise?branch=main)
 
 [Coveralls](https://coveralls.io/) demo project, using:
 
