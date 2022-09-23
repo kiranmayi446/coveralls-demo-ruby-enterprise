@@ -29,3 +29,5 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         coveralls-endpoint: https://enterprise-demo.coveralls.io
         path-to-lcov: ./coverage/lcov/coveralls-demo-ruby-enterprise.lcov
+      env:
+        NODE_COVERALLS_DEBUG: 1
